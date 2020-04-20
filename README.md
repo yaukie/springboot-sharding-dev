@@ -272,8 +272,12 @@ mybatis,通过代码机实现前后端分离,通过内置jetty服务器即可发
      2. [https://github.com/yaukie/springboot-sharding-dev.git](https://github.com/yaukie/springboot-sharding-dev.git)   
      3. [https://github.com/yaukie/springboot-sharding-pro.git](https://github.com/yaukie/springboot-sharding-pro.git)  
  ### 2. 配置maven  
- 本实例使用的是阿里云的私有仓库,并将本地jar信息推送到此,以做统一管理,因此,如果要使用本项目,您需要根据情况,配置一下setting.xml  
- 文件,使用idea引入项目之后,执行mvn clean install -U 强制更新,将依赖jar导入到本地仓库.
+     本实例使用的是阿里云的私有仓库,并将本地jar信息推送到此,以做统一管理,因此,如果要使用本项目,您需要根据情况,配置一下setting.xml  
+     文件,使用idea引入项目之后,执行mvn clean install -U 强制更新,将依赖jar导入到本地仓库.  
+     本例的项目jar已经推送到阿里云的私有仓库,见如下图,读者使用的时候,可以直接按照上述配置更新到本地:  
+   ![Image text](http://open.inspur.com/yuenbin/springboot-sharding-pro/raw/master/folder/07.png)  
+   ![Image text](https://raw.githubusercontent.com/yaukie/springboot-sharding-pro/master/folder/07.png)  
+       
  ### 3. 配置数据库  
      1. 设置本地mysql数据库,执行springboot-sharding-dev/doc/目录下的mysql建库,建表语句,在本地建响应的数据表.   
      2. 修改springboot-sharding-dev项目下对应的yml文件, yml说明如下:  
