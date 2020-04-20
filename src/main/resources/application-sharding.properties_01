@@ -1,0 +1,31 @@
+spring.shardingsphere.datasource.names=ds0,ds1
+
+spring.shardingsphere.datasource.ds0.type=com.alibaba.druid.pool.DruidDataSource
+spring.shardingsphere.datasource.ds0.driver-class-name=com.mysql.jdbc.Driver
+spring.shardingsphere.datasource.ds0.url=jdbc:mysql://localhost:3306/ds0
+spring.shardingsphere.datasource.ds0.username=root
+spring.shardingsphere.datasource.ds0.password=root
+
+spring.shardingsphere.datasource.ds1.type=com.alibaba.druid.pool.DruidDataSource
+spring.shardingsphere.datasource.ds1.driver-class-name=com.mysql.jdbc.Driver
+spring.shardingsphere.datasource.ds1.url=jdbc:mysql://localhost:3306/ds1
+spring.shardingsphere.datasource.ds1.username=root
+spring.shardingsphere.datasource.ds1.password=root
+
+
+spring.shardingsphere.sharding.tables.t_order.actualDataNodes=ds${0..1}.t_order${0..1}
+spring.shardingsphere.sharding.tables.t_order.databaseStrategy.hint.algorithm-class-name=org.yaukie.demo.sharding.AutoHintShardingAlgorithm
+spring.shardingsphere.sharding.tables.t_order.tableStrategy.hint.algorithm-class-name=org.yaukie.demo.sharding.AutoHintShardingAlgorithm
+spring.shardingsphere.sharding.tables.t_order.keyGenerator.type=SNOWFLAKE
+spring.shardingsphere.sharding.tables.t_order.keyGenerator.column=order_id
+spring.shardingsphere.sharding.tables.t_order.keyGenerator.props.worker.id=order_id
+spring.shardingsphere.sharding.tables.t_order_item.actualDataNodes=ds${0..1}.t_order_item${0..1}
+spring.shardingsphere.sharding.binding-tables=- t_order,t_order_item
+
+spring.shardingsphere.sharding.default-database-strategy.inline.sharding-column=user_id
+spring.shardingsphere.sharding.default-database-strategy.inline.algorithm-expression=ds${user_id % 2}
+spring.shardingsphere.sharding.default-table-strategy.none=
+
+spring.shardingsphere.props.sql.show=true
+
+

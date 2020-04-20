@@ -1,0 +1,35 @@
+#sharding 分布式中间件 数据脱敏演示
+spring:
+  shardingsphere:
+    datasource:
+      name: encrypt
+      encrypt:
+        max-total: 100
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/encrypt?serverTimezone=UTC&useSSL=false
+        username: root
+        password: root
+    encrypt:
+      tables:
+        t_encrypt_order:
+          columns:
+            user_id:
+              plainColumn: user_decrypt
+              encryptor: encryptor_aes
+              cipherColumn: user_encrypt
+              assistedQueryColumn: user_assisted
+      encryptors:
+        encryptor_aes:
+          type: aes
+          props:
+            aes:
+              key:
+                value: 123456
+    props:
+      query:
+        with:
+          cipher:
+            column: false
+      sql:
+        show: true

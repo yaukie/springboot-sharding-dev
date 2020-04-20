@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.yaukie.sharding:springboot-sharding-base:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../local/org/yaukie/sharding/springboot-sharding-base/1.0-SNAPSHOT/springboot-sharding-base-1.0-20200418.073958-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../local/org/yaukie/sharding/springboot-sharding-base/1.0-SNAPSHOT/springboot-sharding-base-1.0-20200418.073958-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../local/org/yaukie/sharding/springboot-sharding-base/1.0-SNAPSHOT/springboot-sharding-base-1.0-20200418.073958-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
