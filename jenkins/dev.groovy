@@ -14,12 +14,12 @@
          stage('Preparation') {
              echo '准备拉取仓库源码....'
              checkout(
-                     [$class: 'GitSCM', branches: [[name: '*/master']],
-                       doGenerateSubmoduleConfigurations: false, extensions: [],
-                       submoduleCfg: [],
+                         [$class: 'GitSCM', branches: [[name: '*/master']],
+                       doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [],
                        userRemoteConfigs: [[credentialsId: '67383ec2-d738-4632-b4b8-36c70180efb0',
-                       url: 'https://github.com/yaukie/springboot-sharding-dev.git']]]
-             )
+                        url: 'https://github.com/yaukie/springboot-sharding-dev.git']]
+                         ]
+                )
              echo '仓库源码拉取成功....'
          }
 
