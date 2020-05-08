@@ -250,8 +250,8 @@ mybatis,通过代码机实现前后端分离,通过内置jetty服务器即可发
             </option>
             </component>  
             配置完成,重启idea,得到如下图所示,表示成功:  
-              ![Image text](http://open.inspur.com/yuenbin/springboot-sharding-pro/raw/master/folder/06.png)  
-              ![Image text](https://raw.githubusercontent.com/yaukie/springboot-sharding-pro/master/folder/06.png)   
+   ![Image text](http://open.inspur.com/yuenbin/springboot-sharding-pro/raw/master/folder/06.png)  
+   ![Image text](https://raw.githubusercontent.com/yaukie/springboot-sharding-pro/master/folder/06.png)   
              
 
 ### 3. 热部署,自动重启  
@@ -289,8 +289,8 @@ mybatis,通过代码机实现前后端分离,通过内置jetty服务器即可发
  ### 4. 启动  
         设置完步骤3之后,直接进入到springboot-sharding-dev的主启动类(ShardingApplicationStart)启动项目  
         启动之后,访问http://localhost:8009/sharding/swagger-ui.html  出现如下访问页面,则表示环境运行成功:  
-         ![Image text](http://open.inspur.com/yuenbin/springboot-sharding-pro/raw/master/folder/04.png)  
-         ![Image text](https://raw.githubusercontent.com/yaukie/springboot-sharding-pro/master/folder/04.png)   
+ ![Image text](http://open.inspur.com/yuenbin/springboot-sharding-pro/raw/master/folder/04.png)  
+ ![Image text](https://raw.githubusercontent.com/yaukie/springboot-sharding-pro/master/folder/04.png)   
  ### 要想启动好项目,请配置好相关的jar包依赖,这里不再赘述  
     
 --- 
